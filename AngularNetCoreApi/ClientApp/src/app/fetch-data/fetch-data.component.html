@@ -1,0 +1,26 @@
+<h1 id="tableLabel">Member Details</h1>
+
+<p>This component demonstrates fetching data from the server.</p>
+
+
+
+<p *ngIf="!members"><em>Loading...</em></p>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="members">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>FirstName</th>
+      <th>LastName</th>
+      <th>Address</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let member of members">
+      <td>{{ member.memberId }}</td>
+      <td>{{ member.firstName }}</td>
+      <td>{{ member.lastName }}</td>
+      <td>{{ member.address }}</td>
+    </tr>
+  </tbody>
+</table>
