@@ -20,6 +20,11 @@ steps:
     publishWebProjects: false
     modifyOutputPath: false
     zipAfterPublish: false
+  
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'test'
+    projects: '**/CoreApi.Tests/*.csproj'
 - task: ArchiveFiles@2
   displayName: "Archive files"
   inputs:
