@@ -14,6 +14,7 @@ namespace CoreApi.Tests
             member.FirstName = "Camstar";
             member.LastName = "Admin";
             member.Address = "Server";
+            Assert.True(1 == 1);
 
         }
     }
